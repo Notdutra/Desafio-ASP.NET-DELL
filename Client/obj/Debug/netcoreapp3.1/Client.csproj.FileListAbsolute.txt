@@ -1,0 +1,4 @@
+C:\Users\vitor_fraga\Documents\DesafioJulio\DesafioJulio\src\Client\obj\Debug\netcoreapp3.1\Client.csprojAssemblyReference.cache
+C:\Users\vitor_fraga\Documents\DesafioJulio\DesafioJulio\src\Client\obj\Debug\netcoreapp3.1\Client.AssemblyInfoInputs.cache
+C:\Users\vitor_fraga\Documents\DesafioJulio\DesafioJulio\src\Client\obj\Debug\netcoreapp3.1\Client.AssemblyInfo.cs
+C:\Users\vitor_fraga\Documents\DesafioJulio\DesafioJulio\src\Client\obj\Debug\netcoreapp3.1\Client.csproj.CoreCompileInputs.cache

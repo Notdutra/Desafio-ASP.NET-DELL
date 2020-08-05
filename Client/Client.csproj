@@ -6,7 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IdentityModel" />
+    <PackageReference Include="IdentityModel">
+      <Version>4.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="system.net.http" Version="4.3.4" />
+    <PackageReference Include="System.Net.Http.Formatting.dll" Version="5.2.3.0" />
   </ItemGroup>
 
 </Project>

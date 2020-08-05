@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\Api\\Api.csproj": {}
+    "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\api\\Api.csproj": {}
   },
   "projects": {
-    "c:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\Api\\Api.csproj": {
+    "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\Api\\Api.csproj",
+        "projectUniqueName": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "c:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\Api\\Api.csproj",
+        "projectPath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\api\\Api.csproj",
         "packagesPath": "C:\\Users\\vitor_fraga\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\Api\\obj\\",
+        "outputPath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vitor_fraga\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,7 +38,11 @@
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "(, )"
+              "version": "[*, )"
+            },
+            "identitymodel": {
+              "target": "Package",
+              "version": "[4.3.1, )"
             }
           },
           "imports": [
