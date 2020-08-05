@@ -1,21 +1,22 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\identityserver\\IdentityServer.csproj": {}
+    "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\IdentityServer\\IdentityServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\identityserver\\IdentityServer.csproj": {
+    "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\IdentityServer\\IdentityServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\identityserver\\IdentityServer.csproj",
+        "projectUniqueName": "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\IdentityServer\\IdentityServer.csproj",
         "projectName": "IdentityServer",
-        "projectPath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\identityserver\\IdentityServer.csproj",
-        "packagesPath": "C:\\Users\\vitor_fraga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\identityserver\\obj\\",
+        "projectPath": "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\IdentityServer\\IdentityServer.csproj",
+        "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\IdentityServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\identityserver\\NuGet.Config",
-          "C:\\Users\\vitor_fraga\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\IdentityServer\\NuGet.Config",
+          "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -39,7 +40,7 @@
           "dependencies": {
             "IdentityServer4": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[4.0.4, )"
             },
             "IdentityServer4.EntityFramework": {
               "target": "Package",
