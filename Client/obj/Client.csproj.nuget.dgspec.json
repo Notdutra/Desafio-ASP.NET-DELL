@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\Client\\Client.csproj": {}
+    "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\Client\\Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\Client\\Client.csproj": {
+    "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\Client\\Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\Client\\Client.csproj",
+        "projectUniqueName": "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\Client\\Client.csproj",
         "projectName": "Client",
-        "projectPath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\Client\\Client.csproj",
-        "packagesPath": "C:\\Users\\vitor_fraga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\Client\\obj\\",
+        "projectPath": "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\Client\\Client.csproj",
+        "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vitor_fraga\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,7 +40,7 @@
           "dependencies": {
             "IdentityModel": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[4.3.1, )"
             },
             "System.Net.Http.Formatting.dll": {
               "target": "Package",
