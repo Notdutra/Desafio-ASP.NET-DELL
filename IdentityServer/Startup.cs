@@ -17,7 +17,7 @@ namespace IdentityServer
             // uncomment, if you want to add an MVC-based UI
             //services.AddControllersWithViews();
             
-            var connectionString = @"server=W107CLHD33;database=teste2;trusted_connection=yes";
+            var connectionString = @"server=ANDROMEDA;database=teste2;trusted_connection=yes";
              var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
 
             var construtor = services.AddIdentityServer()
