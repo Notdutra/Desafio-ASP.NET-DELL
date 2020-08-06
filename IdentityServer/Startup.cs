@@ -6,7 +6,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
-
+using System.Security.Cryptography.X509Certificates;
+using System.IO;
+using System.Linq;
+using IdentityServer4.EntityFramework.Mappers;
 
 namespace IdentityServer
 {
@@ -19,9 +22,9 @@ namespace IdentityServer
             
             var connectionString = @"server=W107CLHD33;database=teste2;trusted_connection=yes";
              var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
-
+            var cert = new X509Certificate2("fred.pfx", "apples");
             var construtor = services.AddIdentityServer()
-                    .AddDeveloperSigningCredential()
+                    .AddSigningCredential(new X509Certificate2("certificate.pfx", "secret"))
                     //.AddTestUsers(Config.GetUsers())
                     .AddConfigurationStore(builder =>
                         builder.ConfigureDbContext = b => b.UseSqlServer(connectionString, options =>
@@ -61,6 +64,23 @@ namespace IdentityServer
                 var context = serviceScope.ServiceProvider.GetRequiredService<IdentityServer4.EntityFramework.DbContexts.ConfigurationDbContext>();
                 //serviceScope.ServiceProvider.GetRequiredService<HospitalContext>().Database.Migrate();
                 context.Database.Migrate();
+
+                 if (context.ApiResources.Any())
+                {
+                    foreach (var resource in Config.ApiScopes)
+                    {
+                        context.ApiScopes.Add(resource.ToEntity());
+                    }
+                    context.SaveChanges();
+                }
+                if (!context.Clients.Any())
+        {
+                    foreach (var client in Config.Clients)
+                    {
+                        context.Clients.Add(client.ToEntity());
+                    }
+                    context.SaveChanges();
+                }
             }
          }
     }

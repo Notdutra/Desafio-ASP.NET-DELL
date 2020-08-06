@@ -39,7 +39,7 @@
           "dependencies": {
             "IdentityServer4": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[4.0.4, )"
             },
             "IdentityServer4.EntityFramework": {
               "target": "Package",

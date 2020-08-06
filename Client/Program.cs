@@ -4,7 +4,9 @@
 using IdentityModel.Client;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Net;
 using System.Net.Http;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
 namespace Client
@@ -13,8 +15,21 @@ namespace Client
     {
         private static async Task Main()
         {
+            HttpClientHandler clientHandler = new HttpClientHandler();
+            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+            //System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12 | System.Net.SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+            //clientHandler.cert
+            //var cert = new X509Certificate2("fred.pfx", "apples");
+            HttpClientHandler handler = new HttpClientHandler();
+            X509Certificate2 certificate = new X509Certificate2("certificate.pfx", "secret");
+            handler.ClientCertificates.Add(certificate);
+            if(certificate == null){
+                Console.WriteLine("certificado ta nulo");
+            }
+            handler.ClientCertificates.Add(certificate);
+            //HttpClient client = new HttpClient(handler);
             // discover endpoints from metadata
-            var client = new HttpClient();
+            var client = new HttpClient(clientHandler);
 
             var disco = await client.GetDiscoveryDocumentAsync("https://localhost:5001");
             if (disco.IsError)
@@ -27,11 +42,13 @@ namespace Client
             var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
             {
                 Address = disco.TokenEndpoint,
-                ClientId = "client",
-                ClientSecret = "secret",
+                ClientId = "13145232242",
+                ClientSecret = "secret2",
 
-                Scope = "api1"
+                Scope = "Paciente"
             });
+
+            Console.WriteLine(tokenResponse.ToString());
             
             if (tokenResponse.IsError)
             {
@@ -43,7 +60,7 @@ namespace Client
             Console.WriteLine("\n\n");
 
             // call api
-            var apiClient = new HttpClient();
+            var apiClient = new HttpClient(clientHandler);
             apiClient.SetBearerToken(tokenResponse.AccessToken);
 
             var response = await apiClient.GetAsync("https://localhost:6001/identity");
@@ -54,7 +71,8 @@ namespace Client
             else
             {
                 var content = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(JArray.Parse(content));
+                Console.WriteLine("Deu certo????");
+                Console.WriteLine(content);
             }
         }
     }

@@ -2948,7 +2948,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "IdentityModel >= *",
+      "IdentityModel >= 4.3.1",
       "System.Net.Http.Formatting.dll >= 5.2.3",
       "system.net.http >= 4.3.4"
     ]
@@ -2959,11 +2959,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\Client\\Client.csproj",
+      "projectUniqueName": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\client\\Client.csproj",
       "projectName": "Client",
-      "projectPath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\Client\\Client.csproj",
+      "projectPath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\client\\Client.csproj",
       "packagesPath": "C:\\Users\\vitor_fraga\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\Client\\obj\\",
+      "outputPath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vitor_fraga\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2990,7 +2990,7 @@
         "dependencies": {
           "IdentityModel": {
             "target": "Package",
-            "version": "[*, )"
+            "version": "[4.3.1, )"
           },
           "System.Net.Http.Formatting.dll": {
             "target": "Package",

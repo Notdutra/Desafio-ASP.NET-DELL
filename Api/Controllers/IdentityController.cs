@@ -4,16 +4,22 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using Api.Models;
 
 namespace Api.Controllers
 {
+
     [Route("identity")]
     [Authorize]
+    
     public class IdentityController : ControllerBase
     {
+        private readonly teste2Context _contexto;
         public IActionResult Get()
         {
-            return new JsonResult(from c in User.Claims select new { c.Type, c.Value });
+            
+            return new BadRequestObjectResult("sucess manito");
+            
         }
     }
 }
