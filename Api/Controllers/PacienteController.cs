@@ -13,35 +13,38 @@ using Microsoft.AspNetCore.DataProtection;
 using static IdentityModel.OidcConstants;
 
 using GrantTypes = IdentityServer4.Models.GrantTypes;
-
-
+using Microsoft.AspNetCore.Authentication;
 
 namespace Api.Controllers
 {
 
     [Route("Paciente")]
-    [AllowAnonymous]
+    [Authorize("Paciente")]
     
-    public class PacienteController : ControllerBase
+    public class PacienteController : ApiControllerAttribute
     {
         public int numelementos;
+        public string testagem;
         private teste2Context _contexto;
         public PacienteController(teste2Context context){
             _contexto = context;
         }
         [HttpGet]
-        public  ActionResult<ICollection<Consultas>> Consultas()
+        [Route("Consulta/{client_id}")]
+        
+        public  ActionResult<ICollection<Consultas>> Consultas(string client_id)
         {
-            
-            if(_contexto == null){
-                numelementos =1 ;
+            if(client_id == null){
+                testagem ="1" ;
             }
             else{
-                numelementos = 2;
+                testagem = "ddd";
             }
-            numelementos = _contexto.Consultas.Where(c => c.Cpf == "13145232242").ToArray().Length;
-            Consultas consultados =  _contexto.Consultas.Where(c => c.Cpf == "13145232242").FirstOrDefault();
-            return BadRequest(numelementos);
+            
+            numelementos = _contexto.Consultas.Where(c => c.Cpf == client_id).ToArray().Length;
+            Consultas consultados =  _contexto.Consultas.Where(c => c.Cpf == client_id).FirstOrDefault();
+            //return new JsonResult(from c in Clients.ClientId select new { c.Type, c.Value });
+            return new OkObjectResult(testagem);
         }
     }
 }

@@ -38,7 +38,7 @@ namespace Api.Controllers
             cliente.ClientSecrets = new List<IdentityServer4.Models.Secret>{new IdentityServer4.Models.Secret(rmedico.R_Senha.Sha256())};
             cliente.AllowedGrantTypes = GrantTypes.ClientCredentials;
             cliente.AllowedScopes = new List<string> {"medico"};
-            
+
             return BadRequest();
         }
     }   

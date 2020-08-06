@@ -47,7 +47,7 @@ namespace Client
 
                 Scope = "Paciente"
             });
-
+            //tokenResponse.AccessToken.c
             Console.WriteLine(tokenResponse.ToString());
             
             if (tokenResponse.IsError)
@@ -62,8 +62,11 @@ namespace Client
             // call api
             var apiClient = new HttpClient(clientHandler);
             apiClient.SetBearerToken(tokenResponse.AccessToken);
+            
+            
+            //apiClient.
 
-            var response = await apiClient.GetAsync("https://localhost:6001/identity");
+            var response = await apiClient.GetAsync("https://localhost:6001/Paciente/Consulta/52395029582");
             if (!response.IsSuccessStatusCode)
             {
                 Console.WriteLine(response.StatusCode);

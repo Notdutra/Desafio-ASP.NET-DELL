@@ -1,4 +1,4 @@
-﻿// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
+// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 using System.Linq;
@@ -9,10 +9,10 @@ using Api.Models;
 namespace Api.Controllers
 {
 
-    [Route("identity")]
-    [Authorize("Paciente")]
+    [Route("Especialidades")]
+    [AllowAnonymous]
     
-    public class IdentityController : ControllerBase
+    public class AnonimatoController : ControllerBase
     {
         private readonly teste2Context _contexto;
         public IActionResult Get()

@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Logging;
 using System.Security.Cryptography.X509Certificates;
 using System.Net.Http;
+using System.Collections.Generic;
 
 namespace Api
 {
@@ -29,7 +30,8 @@ namespace Api
             // accepts any access token issued by identity server
             services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
-                {
+                {  
+                    
                     options.Authority = "https://localhost:5001";
                     options.BackchannelHttpHandler = clientHandler;
                     options.TokenValidationParameters = new TokenValidationParameters
@@ -37,16 +39,29 @@ namespace Api
                         ValidateAudience = false,
                         
                         
+                        
+                        
                     };
+                    options.SaveToken=true;
+                    //option.
                 });
             //services.AddCertificateForwarding(certificate);
             // adds an authorization policy to make sure the token is for scope 'api1'
+            //services.
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("ApiScope", policy =>
+                options.AddPolicy("Paciente", policy =>
                 {
                     policy.RequireAuthenticatedUser();
                     policy.RequireClaim("scope", "Paciente");
+                    //policy.RequireClaim()
+
+                });
+                options.AddPolicy("Funcionario", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.RequireClaim("scope", new List<string>{"medico", "Enfermeiro"});
+                    //policy.RequireClaim("scope", "Enfermeiro");
                 });
             });
         }
@@ -60,8 +75,10 @@ namespace Api
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers()
-                    .RequireAuthorization("ApiScope");
+                //endpoints.MapControllers()
+                //    .RequireAuthorization("Paciente");
+                endpoints.MapControllerRoute("Funcionario","Funcionario/").RequireAuthorization("Funcionario");
+                endpoints.MapControllerRoute("Paciente","Paciente/").RequireAuthorization("Paciente");
             });
         }
     }
