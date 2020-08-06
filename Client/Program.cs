@@ -2,6 +2,7 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 using IdentityModel.Client;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Net;
@@ -42,10 +43,10 @@ namespace Client
             var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
             {
                 Address = disco.TokenEndpoint,
-                ClientId = "13145232242",
-                ClientSecret = "secret2",
+                ClientId = "63729264813726",
+                ClientSecret = "secret6",
 
-                Scope = "Paciente"
+                Scope = "Enfermeiro"
             });
             //tokenResponse.AccessToken.c
             Console.WriteLine(tokenResponse.ToString());
@@ -66,7 +67,7 @@ namespace Client
             
             //apiClient.
 
-            var response = await apiClient.GetAsync("https://localhost:6001/Paciente/Consulta/52395029582");
+            var response = await apiClient.GetAsync("https://localhost:6001/Funcionario/Medicos");
             if (!response.IsSuccessStatusCode)
             {
                 Console.WriteLine(response.StatusCode);
@@ -75,7 +76,7 @@ namespace Client
             {
                 var content = await response.Content.ReadAsStringAsync();
                 Console.WriteLine("Deu certo????");
-                Console.WriteLine(content);
+                Console.WriteLine( JsonConvert.DeserializeObject(content) );
             }
         }
     }

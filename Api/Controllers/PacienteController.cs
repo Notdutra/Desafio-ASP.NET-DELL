@@ -42,9 +42,9 @@ namespace Api.Controllers
             }
             
             numelementos = _contexto.Consultas.Where(c => c.Cpf == client_id).ToArray().Length;
-            Consultas consultados =  _contexto.Consultas.Where(c => c.Cpf == client_id).FirstOrDefault();
+            IQueryable<Consultas> consultados =  _contexto.Consultas.Where(c => c.Cpf == client_id);
             //return new JsonResult(from c in Clients.ClientId select new { c.Type, c.Value });
-            return new OkObjectResult(testagem);
+            return new OkObjectResult(consultados);
         }
     }
 }
