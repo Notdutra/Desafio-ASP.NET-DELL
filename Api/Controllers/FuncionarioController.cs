@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Api.Models;
 using System.Collections.Generic;
+using System;
 
 namespace Api.Controllers
 {
@@ -22,8 +23,48 @@ namespace Api.Controllers
         [Route("Consultas")]
         public IActionResult Consultas()
         {
+            //DateTime ce;
+
+            var tente = _contexto.Consultas.OrderBy (t => t.Crm)
+                .Join (_contexto.Medicos,
+                    consulta => consulta.Crm,
+                    medico => medico.Crm,
+                    
+                    (consulta, medico) => new {
+                        Medico = medico.Nome,
+                            Coren = consulta.Coren,
+                            CPF = consulta.Cpf,
+                            DataConsulta = consulta.DataConsulta,
+                            CodTriagem = consulta.CodTriagem
+                    });
+
+                  var tente2 =  tente.Join(_contexto.Pacientes,              
+                    consulta => consulta.CPF,
+                    paciente => paciente.Cpf,
+                    ( consulta,paciente) => new {
+                        Medico = consulta.Medico,
+                            paciente = paciente.Nome,
+                            Coren = consulta.Coren,
+                            DataConsulta = consulta.DataConsulta,
+                            CodTriagem = consulta.CodTriagem
+                    }
+                );
+
+              var tente3 = tente2.Join(_contexto.Triagem,
+                    consulta => consulta.CodTriagem , // como dar outerjoin??
+                    triagem => triagem.CodTriagem,              
+                    ( consulta,triagem) => new {
+                        Medico = consulta.Medico,
+                            descricao = triagem.DescricaoPaciente,
+                            paciente = consulta.paciente,
+                            Coren = consulta.Coren,
+                            DataConsulta = consulta.DataConsulta,
+                    }
+                );
+
+            tente3.Join()
             
-            return new OkObjectResult(_contexto.Consultas.OrderBy(t => t.Cpf));
+            return new OkObjectResult (tente3);
             
         }
 

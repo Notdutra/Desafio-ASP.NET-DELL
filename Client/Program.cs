@@ -67,7 +67,7 @@ namespace Client
             
             //apiClient.
 
-            var response = await apiClient.GetAsync("https://localhost:6001/Funcionario/Medicos");
+            var response = await apiClient.GetAsync("https://localhost:6001/Funcionario/Consultas");
             if (!response.IsSuccessStatusCode)
             {
                 Console.WriteLine(response.StatusCode);
