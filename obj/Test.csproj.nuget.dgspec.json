@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arthu\\Desktop\\Test\\Test.csproj": {}
+    "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arthu\\Desktop\\Test\\Test.csproj": {
+    "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arthu\\Desktop\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\Users\\arthu\\Desktop\\Test\\Test.csproj",
+        "projectPath": "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\Test.csproj",
         "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arthu\\Desktop\\Test\\obj\\",
+        "outputPath": "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config",

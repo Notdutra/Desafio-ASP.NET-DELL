@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e1TfHCU+cZ+PMpU5O0808i6Q7Wkzu/dm5fhy4Mi30V/hjykvUhIla/GNiO5z0ZYdP4pIb5Jy7hONyhwvLnYN6w==",
+  "dgSpecHash": "YQ47iHSc2yx59G0zyThNtV3N9Y0712Y49nNjTrl4qh/PxA7evakx5tEyEN39N5sfHZ5/4t6ZnTUQP7S8pgGViA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arthu\\Desktop\\Test\\Test.csproj",
+  "projectFilePath": "C:\\Users\\arthu\\Desktop\\Dell\\Treinamento\\Desafio-ASP.NET-DELL\\Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arthu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
