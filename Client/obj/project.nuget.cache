@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T7Py5bSfXplkadf1oFfPC9/3BPbXcX6Gecrtg1OKZu7Lj4mdNQdfbN5lm/w9o4uXN/kms5m0SUgh9jbBVt4NSA==",
+  "dgSpecHash": "s0Cd+djxM7uW0QLvi20WL8CfyUAyHFuvoWfVjsd5T2Q06/zISVUsRRw5MDN2FED9DBpwCpup0gnU74e/ymQfeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\client\\Client.csproj",
+  "projectFilePath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\Client - Copy\\Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vitor_fraga\\.nuget\\packages\\identitymodel\\4.3.1\\identitymodel.4.3.1.nupkg.sha512",
     "C:\\Users\\vitor_fraga\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",

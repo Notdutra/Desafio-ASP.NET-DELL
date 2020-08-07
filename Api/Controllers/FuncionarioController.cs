@@ -62,7 +62,7 @@ namespace Api.Controllers
                     }
                 );
 
-            tente3.Join()
+            //tente3.Join()
             
             return new OkObjectResult (tente3);
             
@@ -91,9 +91,10 @@ namespace Api.Controllers
 
         }
 
-        [Route("Medicos")]
+        [Route("Medicos{crm}")]
 
-        public IActionResult BuscaMedicos(){
+        public IActionResult BuscaMedicos(string crm){
+            //if(crm == null)
 
             return new OkObjectResult(_contexto.Medicos.OrderBy(t => t.Crm)
                                     .Join(_contexto.Especialidades,

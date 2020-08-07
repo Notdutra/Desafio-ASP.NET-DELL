@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\identityserver\\IdentityServer.csproj": {}
+    "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\IdentityServer\\IdentityServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\identityserver\\IdentityServer.csproj": {
+    "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\IdentityServer\\IdentityServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\identityserver\\IdentityServer.csproj",
+        "projectUniqueName": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\IdentityServer\\IdentityServer.csproj",
         "projectName": "IdentityServer",
-        "projectPath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\identityserver\\IdentityServer.csproj",
+        "projectPath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\IdentityServer\\IdentityServer.csproj",
         "packagesPath": "C:\\Users\\vitor_fraga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\identityserver\\obj\\",
+        "outputPath": "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\IdentityServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\identityserver\\NuGet.Config",
+          "C:\\Users\\vitor_fraga\\Documents\\DesafioJulio\\DesafioJulio\\src\\IdentityServer\\NuGet.Config",
           "C:\\Users\\vitor_fraga\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [

@@ -12,7 +12,7 @@
     ],
     "languageVersion": "",
     "platform": "",
-    "allowUnsafe": true,
+    "allowUnsafe": false,
     "warningsAsErrors": false,
     "optimize": false,
     "keyFile": "",
@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Api/1.0.0": {
         "dependencies": {
+          "IdentityServer4.EntityFramework": "4.0.4",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.6",
           "Microsoft.EntityFrameworkCore.Design": "3.1.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.6",
@@ -306,6 +307,21 @@
           "Api.dll": {}
         }
       },
+      "AutoMapper/10.0.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "System.Reflection.Emit": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
       "IdentityModel/4.3.1": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.2",
@@ -337,6 +353,37 @@
         },
         "compile": {
           "lib/netcoreapp3.1/IdentityServer4.dll": {}
+        }
+      },
+      "IdentityServer4.EntityFramework/4.0.4": {
+        "dependencies": {
+          "IdentityServer4": "4.0.4",
+          "IdentityServer4.EntityFramework.Storage": "4.0.4"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/IdentityServer4.EntityFramework.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.0.4.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/IdentityServer4.EntityFramework.dll": {}
+        }
+      },
+      "IdentityServer4.EntityFramework.Storage/4.0.4": {
+        "dependencies": {
+          "AutoMapper": "10.0.0",
+          "IdentityServer4.Storage": "4.0.4",
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.6"
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityServer4.EntityFramework.Storage.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.0.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityServer4.EntityFramework.Storage.dll": {}
         }
       },
       "IdentityServer4.Storage/4.0.4": {
@@ -1081,15 +1128,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Reflection.Emit/4.3.0": {
-        "dependencies": {
-          "System.IO": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        }
-      },
+      "System.Reflection.Emit/4.7.0": {},
       "System.Reflection.Emit.ILGeneration/4.3.0": {
         "dependencies": {
           "System.Reflection": "4.3.0",
@@ -1377,7 +1416,7 @@
           "System.IO": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Reflection": "4.3.0",
-          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit": "4.7.0",
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
@@ -3013,6 +3052,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AutoMapper/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-T09NoqMZBqw0/JEauXulxnmmerl0Zj03e0r6VCcJ0LURWBIaYxZPPoiDv8bHf5Y4x2xcXJp4JPXoCaeOMJfHEA==",
+      "path": "automapper/10.0.0",
+      "hashPath": "automapper.10.0.0.nupkg.sha512"
+    },
     "IdentityModel/4.3.1": {
       "type": "package",
       "serviceable": true,
@@ -3026,6 +3072,20 @@
       "sha512": "sha512-Jx0qxfmRDPojGQnEXKiPDPoVTpk3HdabjTaxoc7ZQpN2nxCSdcNZkohceqhiX2nk40qviJ5foFT9+Z8FjB90Iw==",
       "path": "identityserver4/4.0.4",
       "hashPath": "identityserver4.4.0.4.nupkg.sha512"
+    },
+    "IdentityServer4.EntityFramework/4.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WQUl2+d+0X+/cCsIq88G6usO64Y+x0vnJq7wkZWjEJAL+e93q+wvWrQ1egs40ibFwc5dlJJH9zTeHeXytUxIGg==",
+      "path": "identityserver4.entityframework/4.0.4",
+      "hashPath": "identityserver4.entityframework.4.0.4.nupkg.sha512"
+    },
+    "IdentityServer4.EntityFramework.Storage/4.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aLgJS1tv/a7z5u8YrSgPrXh1FzhHDTZWGuRPhLFZFWPDZGpWLMTEoWF25ITxo8uSfqu+rR/wAtiK71j6O/GdHw==",
+      "path": "identityserver4.entityframework.storage/4.0.4",
+      "hashPath": "identityserver4.entityframework.storage.4.0.4.nupkg.sha512"
     },
     "IdentityServer4.Storage/4.0.4": {
       "type": "package",
@@ -3475,12 +3535,12 @@
       "path": "system.reflection/4.3.0",
       "hashPath": "system.reflection.4.3.0.nupkg.sha512"
     },
-    "System.Reflection.Emit/4.3.0": {
+    "System.Reflection.Emit/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg==",
-      "path": "system.reflection.emit/4.3.0",
-      "hashPath": "system.reflection.emit.4.3.0.nupkg.sha512"
+      "sha512": "sha512-VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
+      "path": "system.reflection.emit/4.7.0",
+      "hashPath": "system.reflection.emit.4.7.0.nupkg.sha512"
     },
     "System.Reflection.Emit.ILGeneration/4.3.0": {
       "type": "package",

@@ -62,3 +62,6 @@ C:\Users\vitor_fraga\Documents\DesafioJulio\DesafioJulio\src\api\bin\Debug\netco
 C:\Users\vitor_fraga\Documents\DesafioJulio\DesafioJulio\src\api\bin\Debug\netcoreapp3.1\IdentityServer4.dll
 C:\Users\vitor_fraga\Documents\DesafioJulio\DesafioJulio\src\api\bin\Debug\netcoreapp3.1\IdentityServer4.Storage.dll
 C:\Users\vitor_fraga\Documents\DesafioJulio\DesafioJulio\src\api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\vitor_fraga\Documents\DesafioJulio\DesafioJulio\src\Api\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\vitor_fraga\Documents\DesafioJulio\DesafioJulio\src\Api\bin\Debug\netcoreapp3.1\IdentityServer4.EntityFramework.dll
+C:\Users\vitor_fraga\Documents\DesafioJulio\DesafioJulio\src\Api\bin\Debug\netcoreapp3.1\IdentityServer4.EntityFramework.Storage.dll

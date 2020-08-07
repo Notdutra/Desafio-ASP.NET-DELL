@@ -43,10 +43,10 @@ namespace Client
             var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
             {
                 Address = disco.TokenEndpoint,
-                ClientId = "63729264813726",
-                ClientSecret = "secret6",
+                ClientId = "13145232242",
+                ClientSecret = "secret2",
 
-                Scope = "Enfermeiro"
+                Scope = "Paciente"
             });
             //tokenResponse.AccessToken.c
             Console.WriteLine(tokenResponse.ToString());
@@ -67,7 +67,7 @@ namespace Client
             
             //apiClient.
 
-            var response = await apiClient.GetAsync("https://localhost:6001/Funcionario/Consultas");
+            var response = await apiClient.GetAsync("https://localhost:6001/Paciente/Consulta/13145232242");
             if (!response.IsSuccessStatusCode)
             {
                 Console.WriteLine(response.StatusCode);
@@ -76,6 +76,7 @@ namespace Client
             {
                 var content = await response.Content.ReadAsStringAsync();
                 Console.WriteLine("Deu certo????");
+                Console.WriteLine( content );
                 Console.WriteLine( JsonConvert.DeserializeObject(content) );
             }
         }
