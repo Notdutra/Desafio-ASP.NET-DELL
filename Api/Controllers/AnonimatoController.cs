@@ -15,10 +15,16 @@ namespace Api.Controllers
     public class AnonimatoController : ControllerBase
     {
         private readonly teste2Context _contexto;
+
+        public AnonimatoController(teste2Context context){
+            _contexto = context;
+            
+            //AuthenticationProperties _de = de;
+        }
         public IActionResult Get()
         {
-            
-            return new OkObjectResult("sucess manito");
+            var especial = _contexto.Especialidades.Select(e => new{e.Nome,e.Descricao});
+            return new OkObjectResult(especial);
             
         }
     

@@ -20,12 +20,15 @@ namespace Api.Controllers
             _contexto = context;
         }
         private readonly teste2Context _contexto;
-        [Route("Consultas")]
-        public IActionResult Consultas()
+        [Route("Consultas{cliente_id}")]
+        public IActionResult Consultas(string cliente_id)
         {
-            //DateTime ce;
-
-            var tente = _contexto.Consultas.OrderBy (t => t.Crm)
+            var tenteinicial = _contexto.Consultas.Select(C => new{C.Cpf,C.Coren,C.CodTriagem, C.Crm,C.DataConsulta});
+            if(!((cliente_id == null) || (cliente_id == ""))){ 
+               tenteinicial = tenteinicial.Where(C => C.Cpf == cliente_id);
+            }
+            
+            var tente = tenteinicial.OrderBy (t => t.Crm)
                 .Join (_contexto.Medicos,
                     consulta => consulta.Crm,
                     medico => medico.Crm,
@@ -64,22 +67,35 @@ namespace Api.Controllers
 
             //tente3.Join()
             
-            return new OkObjectResult (tente3);
             
+            return new OkObjectResult (tente3);
         }
 
         [Route("Pacientes")]
 
         public IActionResult BuscaPaciente(){
 
-            return new OkObjectResult(_contexto.Pacientes.OrderBy(t => t.Cpf));
+            return new OkObjectResult(_contexto.Pacientes.Select(p => new{p.Nome,p.Sexo}));
         }
 
         [Route("Triagem")]
 
         public IActionResult BuscaTriagem(){
+            
+            var tente = _contexto.Triagem.Select(C =>new{C.DataConsulta,C.Cpf,C.Coren,C.DescricaoPaciente,C.Prioridade});
 
-            return new OkObjectResult(_contexto.Triagem.OrderBy(t => t.Cpf));
+            var tente2 = tente.Join(_contexto.Pacientes,
+                                    triagem => triagem.Cpf,
+                                    P => P.Cpf,
+                                    (triagem,P)=> new{
+                                        NomePaciente = P.Nome,
+                                        Coren = triagem.Coren,
+                                        Data = triagem.DataConsulta,
+                                        Descricao = triagem.DescricaoPaciente,
+                                        Prioridade = triagem.Prioridade
+                                    });
+
+            return new OkObjectResult(tente2);
 
         }
 
